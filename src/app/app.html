@@ -1,1 +1,38 @@
-<ion-nav [root]="rootPage"></ion-nav>
+<ion-menu [content]="main_content">
+  <ion-header>
+    <ion-toolbar color="accent">
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <button ion-item>
+          <ion-icon name="copy" item-start></ion-icon>
+          Multas
+      </button>
+      <button ion-item >
+          <ion-icon name="clipboard" item-start></ion-icon>
+          Tenencia
+      </button>
+      <button ion-item >
+          <ion-icon name="car" item-start></ion-icon>
+          Verificación
+      </button>
+      <button ion-item >
+          <ion-icon name="navigate" item-start></ion-icon>
+          Servicios
+      </button>
+      <button ion-item>
+          <ion-icon name="folder" item-start></ion-icon>
+          Reportes
+      </button>
+      <button ion-item>
+          <ion-icon name="contact" item-start></ion-icon>
+          Perfil
+      </button>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+
+<ion-nav #main_content [root]="rootPage"></ion-nav>
