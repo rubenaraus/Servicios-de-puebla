@@ -1,6 +1,6 @@
 <ion-toolbar color="accent">
     <ion-buttons start>
-      <button ion-button icon-only color="primary" start menuToggle>
+        <button ion-button icon-only color="primary" start menuToggle>
         <ion-icon name="menu"></ion-icon>
       </button>
     </ion-buttons>
@@ -9,16 +9,8 @@
 <div>
     <ion-item color="accent">
         <ion-label>Automovil</ion-label>
-        <ion-select [(ngModel)]="gaming" interface="action-sheet">
-            <ion-option value="nes">Nissan Versa - XLS-3547</ion-option>
-            <ion-option value="n67">VW Vento - SCS-7683</ion-option>
-            <ion-option value="n66">Toyota - SCS-7683</ion-option>
-            <ion-option value="n65">BMW - SCS-7683</ion-option>
-            <ion-option value="n64">Chevrolet - SCS-7683</ion-option>
-            <ion-option value="n64">Ford - SCS-7683</ion-option>
-            <ion-option value="n63">Fiat - SCS-7683</ion-option>
-            <ion-option value="n62">VW Vento - SCS-7683</ion-option>
-            <ion-option value="n61">VW Vento - SCS-7683</ion-option>
+        <ion-select [(ngModel)]="currentAuto.id" (ngModelChange)="changeAutoSelected($event)" interface="action-sheet">
+            <ion-option *ngFor="let auto of autoList" [value]="auto.id">{{ auto.brand }} {{ auto.model }} </ion-option>
         </ion-select>
     </ion-item>
 </div>
