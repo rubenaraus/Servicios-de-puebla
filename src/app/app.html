@@ -6,29 +6,9 @@
   </ion-header>
   <ion-content>
     <ion-list>
-      <button ion-item>
-          <ion-icon name="copy" item-start></ion-icon>
-          Multas
-      </button>
-      <button ion-item >
-          <ion-icon name="clipboard" item-start></ion-icon>
-          Tenencia
-      </button>
-      <button ion-item >
-          <ion-icon name="car" item-start></ion-icon>
-          Verificación
-      </button>
-      <button ion-item >
-          <ion-icon name="navigate" item-start></ion-icon>
-          Servicios
-      </button>
-      <button ion-item>
-          <ion-icon name="folder" item-start></ion-icon>
-          Reportes
-      </button>
-      <button ion-item>
-          <ion-icon name="contact" item-start></ion-icon>
-          Perfil
+      <button *ngFor="let page of pages" ion-item (click)="goPage(page)" menuToggle>
+          <ion-icon [name]="page.icon" item-start></ion-icon>
+          {{ page.name }}
       </button>
     </ion-list>
   </ion-content>

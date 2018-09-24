@@ -15,15 +15,6 @@ $app-direction: ltr;
 @import "ionic.globals";
 
 
-// Shared Variables
-// --------------------------------------------------
-// To customize the look and feel of this app, you can override
-// the Sass variables found in Ionic's source scss files.
-// To view all the possible Ionic variables, see:
-// http://ionicframework.com/docs/theming/overriding-ionic-variables/
-
-
-
 
 // Named Color Variables
 // --------------------------------------------------
@@ -71,6 +62,11 @@ $colors: (
 // then be future customized. This import comes last
 // so that the above variables are used and Ionic's
 // default are overridden.
+
+div {
+    margin: 0px;
+    padding: 0px;
+}
 
 @import "ionic.theme.default";
 

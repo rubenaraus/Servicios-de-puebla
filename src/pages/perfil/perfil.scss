@@ -1,0 +1,28 @@
+page-perfil {
+    .toolbar-background {
+        opacity: 0;
+    }
+    .top-profile {
+        height: 250px;
+        position: relative;
+        top: 0;
+        left: 0;
+        .profile-image-bg {
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            filter: blur(0px);
+            opacity: 0.9;
+            height: 250px;
+        }
+        .profile-image-icon {
+            widows: 100px;
+            height: 100px;
+            border-radius: 50%;
+            position: relative;
+            z-index: 3;
+            bottom: -200px;
+        }
+    }
+}

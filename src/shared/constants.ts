@@ -1,0 +1,1 @@
+export const AUTO_SELECTED: string = 'auto_selected';

@@ -1,16 +1,15 @@
 <ion-header>
-    <ion-toolbar color="accent">
-      <ion-buttons start>
-        <button ion-button icon-only color="primary" start menuToggle>
-          <ion-icon name="menu"></ion-icon>
-        </button>
-      </ion-buttons>
-      <ion-title>Servicios de Puebla</ion-title>
-    </ion-toolbar>
+    <rs-toolbar title="Servicios de Puebla"></rs-toolbar>
 </ion-header>
 
-<ion-content padding>
-    <div style="width: auto">
+<ion-content>
+    <div style="width: auto" class="animated fadeInUp">
         <img src="./../assets/imgs/puebla-logo.png" alt="">
     </div>
+    <ion-fab right bottom class="animated fadeInDownBig">
+        <button ion-fab color="primary" (click)="goNewCar()">
+            <ion-icon name="add"></ion-icon>
+        </button>
+    </ion-fab>
+    
 </ion-content>
