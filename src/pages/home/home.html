@@ -2,10 +2,25 @@
     <rs-toolbar title="Servicios de Puebla"></rs-toolbar>
 </ion-header>
 
-<ion-content>
-    <div style="width: auto" class="animated fadeInUp">
-        <img src="./../assets/imgs/puebla-logo.png" alt="">
+<ion-content padding-top>
+    <div style="width: auto; height: 200px;" class="animated fadeInUp">
+        <ion-slides pager autoplay="5000" loop="true">
+            <ion-slide>
+                <img src="./../assets/imgs/puebla-logo.png">
+            </ion-slide>
+            <ion-slide>
+                <img src="./../../assets/imgs/slide1.jpg">
+            </ion-slide>
+            <ion-slide>
+                <img src="./../../assets/imgs/slide2.jpg">
+            </ion-slide>
+            <ion-slide>
+                <img src="./../../assets/imgs/slide3.jpg">
+            </ion-slide>
+
+        </ion-slides>
     </div>
+
     <ion-fab right bottom class="animated fadeInDownBig">
         <button ion-fab color="primary" (click)="goNewCar()">
             <ion-icon name="add"></ion-icon>

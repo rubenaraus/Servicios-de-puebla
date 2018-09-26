@@ -15,6 +15,11 @@ import { VerificacionPage } from '../pages/verificacion/verificacion';
 import { PerfilPage } from '../pages/perfil/perfil';
 import { AutoProvider } from '../providers/auto/auto';
 import { MultasProvider } from '../providers/multas/multas';
+import { AutoHideDirective } from '../directives/auto-hide/auto-hide';
+import { PayMultaPage } from '../pages/pay-multa/pay-multa';
+
+// Mapa
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   declarations: [
@@ -25,11 +30,16 @@ import { MultasProvider } from '../providers/multas/multas';
     RsToolbarComponent,
     TenenciaPage,
     VerificacionPage,
-    PerfilPage
+    PerfilPage,
+    AutoHideDirective,
+    PayMultaPage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    AgmCoreModule.forRoot({
+        apiKey: 'AIzaSyBeCwwpl9rh_EGBNP_0BDYq0-ppdJlI-Uo'
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -39,7 +49,8 @@ import { MultasProvider } from '../providers/multas/multas';
     NewCarPage,
     TenenciaPage,
     VerificacionPage,
-    PerfilPage
+    PerfilPage,
+    PayMultaPage
   ],
   providers: [
     StatusBar,

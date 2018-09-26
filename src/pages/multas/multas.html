@@ -4,7 +4,7 @@
 
 <ion-content>
 
-    <ion-content padding-top>
+    <ion-content padding-top [auto-hide]="toHide">
         <ion-card class="rs-card" *ngFor="let multa of multas">
             <ion-row>
                 <ion-col col-12 class="rs-card-title">
@@ -20,7 +20,7 @@
             <ion-row justify-content-end>
                 <ion-col col-9 padding-top>
                     <h1 disabled>
-                        {{ multa.amout | currency }}
+                        {{ multa.amount | currency }}
                     </h1>
                 </ion-col>
                 <ion-col col-3>
@@ -37,8 +37,11 @@
     </ion-content>
 
 
-    <div class="bottom-content">
-        <button ion-button block color="primary" class="elevation-1">Pagar</button>
+    <div class="bottom-content" #toHide>
+        <button ion-button block large color="primary" class="elevation-1" [navPush]="payMultasPage">
+            Pagar &nbsp;
+            <ion-badge color="accent" item-end>{{ amountToPay | currency }}</ion-badge>
+        </button>
     </div>
 
 </ion-content>

@@ -9,7 +9,10 @@ import { NewCarPage } from '../newcar/newcar';
 export class HomePage {
 
     constructor(public navCtrl: NavController) {
+    }
 
+    ionViewDidLoad() {
+        
     }
 
     goNewCar(){

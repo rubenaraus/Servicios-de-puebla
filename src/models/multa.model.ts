@@ -7,6 +7,6 @@ export interface Multa {
     location?: string;
     latitude?: number;
     longitude?: number;
-    amout: number;
+    amount: number;
 
 }

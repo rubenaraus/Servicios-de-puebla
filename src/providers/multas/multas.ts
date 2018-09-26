@@ -10,16 +10,26 @@ export class MultasProvider {
     constructor() {
         
         this.multas = [{
-            id: 4,
+            id: 5,
             dateEmit: new Date(),
             dateExpiration: new Date(),
-            description: 'Paso un semaforo en rojo',
+            description: 'Pasó un semaforo en rojo',
             paid: false,
             location: '',
             latitude: 25.667945,
             longitude: -100.343567,
-            amout: 125.90,
-        },{
+            amount: 125.90,
+        }, {
+            id: 4,
+            dateEmit: new Date(),
+            dateExpiration: new Date(),
+            description: 'Pasó un alto',
+            paid: false,
+            location: '',
+            latitude: 25.667945,
+            longitude: -100.343567,
+            amount: 55.90,
+        }, {
             id: 3,
             dateEmit: new Date(),
             dateExpiration: new Date(),
@@ -28,7 +38,7 @@ export class MultasProvider {
             location: '',
             latitude: 25.667945,
             longitude: -100.343567,
-            amout: 125.90,
+            amount: 30.01,
         },{
             id: 2,
             dateEmit: new Date(),
@@ -38,7 +48,7 @@ export class MultasProvider {
             location: '',
             latitude: 25.667945,
             longitude: -100.343567,
-            amout: 125.90,
+            amount: 310.70,
         },{
             id: 1,
             dateEmit: new Date(),
@@ -48,7 +58,7 @@ export class MultasProvider {
             location: '',
             latitude: 25.667945,
             longitude: -100.343567,
-            amout: 125.90,
+            amount: 310.70,
         }
     ];
     }
