@@ -5,33 +5,31 @@
 <ion-content>
 
     <ion-content padding-top>
-        <ion-card *ngFor="let multa of multas">
+        <ion-card class="rs-card" *ngFor="let multa of multas">
             <ion-row>
-                <ion-col col-12 class="rs-card-header">
+                <ion-col col-12 class="rs-card-title">
                     {{ multa.description }}
                 </ion-col>
-                <!-- <ion-col col-3 justify-content-end>
-                    <p>{{ multa.dateExpiration | date:'shortDate' }}</p>
-                </ion-col> -->
+            </ion-row>
+            <ion-row>
+                <ion-col col-12>
+                    <p>{{ multa.dateExpiration | date:'short' }}</p>
+                </ion-col>
             </ion-row>
 
-            <!-- <ion-card-content>
-                <p>{{ multa.dateExpiration | date:'shortDate' }}</p>
-            </ion-card-content> -->
-
-            <ion-row justify-content-end *ngIf="!multa.paid">
-                <ion-col col-9>
-                    <h1>
+            <ion-row justify-content-end>
+                <ion-col col-9 padding-top>
+                    <h1 disabled>
                         {{ multa.amout | currency }}
                     </h1>
                 </ion-col>
                 <ion-col col-3>
-                    <!-- <button ion-button clear>Pagar</button> -->
+                    <button *ngIf="!multa.paid" ion-button clear>Pagar</button>
+                    <button *ngIf="multa.paid" ion-button clear color="accent">Detalle</button>
                 </ion-col>
             </ion-row>
 
             <ion-row justify-content-end *ngIf="multa.paid">
-                <button ion-button clear color="accent">Detalle</button>
             </ion-row>
 
         </ion-card>

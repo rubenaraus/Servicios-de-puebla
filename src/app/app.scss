@@ -16,7 +16,13 @@
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
-.rs-card-header {
-    padding: 16px 16px 0px 16px;
-    font-size: 16px;
+.rs-card {
+    padding: 0px 8px 0px 8px;
+    .rs-card-title {
+        font-size: 16px;
+    }
+}
+
+.rs-disable {
+    color: dark;
 }
