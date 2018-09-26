@@ -1,25 +1,28 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the MultasPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { IonicPage } from 'ionic-angular';
+import { MultasProvider } from '../../providers/multas/multas';
+import { Multa } from '../../models/multa.model';
 
 @IonicPage()
 @Component({
-  selector: 'page-multas',
+  selector: 'multas',
   templateUrl: 'multas.html',
 })
 export class MultasPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+    multas: Multa[];
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad MultasPage');
-  }
+    constructor(private multasProvider: MultasProvider) {
+        this.multasProvider.getMultasList()
+        .subscribe((multas: Multa[]) => {
+            this.multas = multas;
+            console.log(this.multas);
+            
+        })
+    }
+    
+    ionViewDidLoad() {
+        console.log('ionViewDidLoad MultasPage');
+    }
 
 }

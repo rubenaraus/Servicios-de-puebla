@@ -14,6 +14,7 @@ import { TenenciaPage } from '../pages/tenencia/tenencia';
 import { VerificacionPage } from '../pages/verificacion/verificacion';
 import { PerfilPage } from '../pages/perfil/perfil';
 import { AutoProvider } from '../providers/auto/auto';
+import { MultasProvider } from '../providers/multas/multas';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { AutoProvider } from '../providers/auto/auto';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    AutoProvider
+    AutoProvider,
+    MultasProvider
   ]
 })
 export class AppModule {}

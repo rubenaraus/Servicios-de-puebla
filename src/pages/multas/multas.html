@@ -1,13 +1,41 @@
 <ion-header>
-
     <rs-toolbar title="Multas"></rs-toolbar>
-
 </ion-header>
 
 <ion-content>
 
-    <ion-content padding>
-        <p>Aqui van las multas del usuario</p>
+    <ion-content padding-top>
+        <ion-card *ngFor="let multa of multas">
+            <ion-row>
+                <ion-col col-12 class="rs-card-header">
+                    {{ multa.description }}
+                </ion-col>
+                <!-- <ion-col col-3 justify-content-end>
+                    <p>{{ multa.dateExpiration | date:'shortDate' }}</p>
+                </ion-col> -->
+            </ion-row>
+
+            <!-- <ion-card-content>
+                <p>{{ multa.dateExpiration | date:'shortDate' }}</p>
+            </ion-card-content> -->
+
+            <ion-row justify-content-end *ngIf="!multa.paid">
+                <ion-col col-9>
+                    <h1>
+                        {{ multa.amout | currency }}
+                    </h1>
+                </ion-col>
+                <ion-col col-3>
+                    <!-- <button ion-button clear>Pagar</button> -->
+                </ion-col>
+            </ion-row>
+
+            <ion-row justify-content-end *ngIf="multa.paid">
+                <button ion-button clear color="accent">Detalle</button>
+            </ion-row>
+
+        </ion-card>
+
     </ion-content>
 
 
