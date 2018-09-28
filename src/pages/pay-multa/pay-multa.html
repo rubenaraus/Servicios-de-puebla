@@ -1,13 +1,102 @@
 <ion-header>
-    <ion-navbar color="accent">
+    <ion-navbar color="accent" class="elevation-1">
         <ion-title>Pagar multa</ion-title>
     </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content>
     <div>
-        <agm-map latitude="51.678418" longitude="7.809007">
-            <!-- <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker> -->
-        </agm-map>
+        <ion-item>
+            <ion-label>
+                <h2>Velocidad a 90km/h</h2>
+            </ion-label>
+            <ion-checkbox checked="true"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+            <ion-label>
+                <h2>Pasó un semaforo en rojo</h2>
+            </ion-label>
+            <ion-checkbox checked="true"></ion-checkbox>
+        </ion-item>
     </div>
+    <div>
+        <ion-card class="animated fadeInRight" style="height: 200px;">
+            <img src="../../assets/imgs/map.png" style="margin-top: -90px;">
+        </ion-card>
+    </div>
+    <div>
+        <ion-card class="animated fadeInRight" style="animation-delay: 100ms">
+            <ion-card-header>
+                Detalle
+            </ion-card-header>
+            <ion-card-content>
+                <ion-row>
+                    <ion-col col-5><b>Fecha: </b></ion-col>
+                    <ion-col col-7>12/12/2018</ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-5><b>Vencimiento:</b></ion-col>
+                    <ion-col col-7>24/12/2018</ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-5><b>Estatus:</b></ion-col>
+                    <ion-col col-7>
+                        <ion-badge>Por pagar</ion-badge>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-5><b>Marca:</b></ion-col>
+                    <ion-col col-7>Nissan</ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-5><b>Modelo:</b></ion-col>
+                    <ion-col col-7>Versa</ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-5><b>Placas:</b></ion-col>
+                    <ion-col col-7>YMP-2579</ion-col>
+                </ion-row>
+            </ion-card-content>
+        </ion-card>
+        <ion-card class="animated fadeInRight" style="animation-delay: 200ms">
+            <ion-card-header>
+                Detalle
+            </ion-card-header>
+            <ion-card-content>
+                <ion-row>
+                    <ion-col col-5><b>Fecha: </b></ion-col>
+                    <ion-col col-7>15/10/2018</ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-5><b>Vencimiento:</b></ion-col>
+                    <ion-col col-7>30/10/2018</ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-5><b>Estatus:</b></ion-col>
+                    <ion-col col-7>
+                        <ion-badge>Por pagar</ion-badge>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-5><b>Marca:</b></ion-col>
+                    <ion-col col-7>Nissan</ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-5><b>Modelo:</b></ion-col>
+                    <ion-col col-7>Versa</ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-5><b>Placas:</b></ion-col>
+                    <ion-col col-7>YMP-2579</ion-col>
+                </ion-row>
+            </ion-card-content>
+        </ion-card>
+    </div>
+
+    <ion-fab right bottom class="animated fadeInDown">
+        <button ion-fab color="primary">
+            Pagar
+            <!-- <ion-icon name="logo-usd"></ion-icon> -->
+        </button>
+    </ion-fab>
 </ion-content>
