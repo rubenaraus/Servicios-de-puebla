@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage } from 'ionic-angular';
+import { IonicPage, NavController } from 'ionic-angular';
 import { MultasProvider } from '../../providers/multas/multas';
 import { Multa } from '../../models/multa.model';
 import { PayMultaPage } from '../pay-multa/pay-multa';
@@ -15,7 +15,7 @@ export class MultasPage {
     amountToPay: number = 0;
     payMultasPage = PayMultaPage;
 
-    constructor(private multasProvider: MultasProvider) {
+    constructor(private multasProvider: MultasProvider, public navCtrl: NavController) {
         this.multasProvider.getMultasList()
         .subscribe((multas: Multa[]) => {
             this.multas = multas;
@@ -30,6 +30,17 @@ export class MultasPage {
                     this.amountToPay += multa.amount;
                 }
             });
+        }
+    }
+
+    goPayMulta(item: Multa ){
+        if (!item) {
+            let data = this.multas.filter((multa: Multa) => !multa.paid)
+            this.navCtrl.push(this.payMultasPage, { data });
+            
+        } else {
+            let data = { item }
+            this.navCtrl.push(this.payMultasPage, [data]);
         }
     }
 

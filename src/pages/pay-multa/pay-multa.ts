@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Multa } from '../../models/multa.model';
 
 @IonicPage()
 @Component({
@@ -8,12 +9,12 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class PayMultaPage {
 
-    title: string = 'My first AGM project';
-    lat: number = 51.678418;
-    lng: number = 7.809007;
+    multas: Multa[];
 
     constructor(public navCtrl: NavController, public navParams: NavParams) {
-
+        let data = this.navParams.get('data');
+        console.log(data);
+        
     }
 
 }

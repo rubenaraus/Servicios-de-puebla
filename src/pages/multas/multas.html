@@ -24,7 +24,7 @@
                     </h1>
                 </ion-col>
                 <ion-col col-3>
-                    <button *ngIf="!multa.paid" ion-button clear>Pagar</button>
+                    <button *ngIf="!multa.paid" ion-button clear (click)="goPayMulta(multa)">Pagar</button>
                     <button *ngIf="multa.paid" ion-button clear color="accent">Detalle</button>
                 </ion-col>
             </ion-row>
@@ -38,7 +38,7 @@
 
 
     <div class="bottom-content" #toHide>
-        <button ion-button block large color="primary" class="elevation-1" [navPush]="payMultasPage">
+        <button ion-button block large color="primary" class="elevation-1" (click)="goPayMulta()">
             Pagar &nbsp;
             <ion-badge color="accent" item-end>{{ amountToPay | currency }}</ion-badge>
         </button>
