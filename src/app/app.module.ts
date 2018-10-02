@@ -20,6 +20,7 @@ import { PayMultaPage } from '../pages/pay-multa/pay-multa';
 
 // Mapa
 import { AgmCoreModule } from '@agm/core';
+import { StyleSanitizerPipe } from '../pipes/style-sanitizer/style-sanitizer';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { AgmCoreModule } from '@agm/core';
     VerificacionPage,
     PerfilPage,
     AutoHideDirective,
-    PayMultaPage
+    PayMultaPage,
+    StyleSanitizerPipe
   ],
   imports: [
     BrowserModule,

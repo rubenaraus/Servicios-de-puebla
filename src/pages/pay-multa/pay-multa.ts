@@ -12,8 +12,8 @@ export class PayMultaPage {
     multas: Multa[];
 
     constructor(public navCtrl: NavController, public navParams: NavParams) {
-        let data = this.navParams.get('data');
-        console.log(data);
+        this.multas = this.navParams.get('data') as Multa[];
+        console.log(this.multas[0].description);    
         
     }
 

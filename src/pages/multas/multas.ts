@@ -39,8 +39,8 @@ export class MultasPage {
             this.navCtrl.push(this.payMultasPage, { data });
             
         } else {
-            let data = { item }
-            this.navCtrl.push(this.payMultasPage, [data]);
+            let data = [item];
+            this.navCtrl.push(this.payMultasPage, {data});
         }
     }
 
