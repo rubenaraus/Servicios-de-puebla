@@ -13,7 +13,7 @@ export class PayMultaPage {
 
     constructor(public navCtrl: NavController, public navParams: NavParams) {
         this.multas = this.navParams.get('data') as Multa[];
-        console.log(this.multas[0].description);    
+        console.log(this.multas[0]);    
         
     }
 

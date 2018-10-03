@@ -5,7 +5,7 @@
 <ion-content>
 
     <ion-content padding-top [auto-hide]="toHide">
-        <ion-card class="rs-card" *ngFor="let multa of multas">
+        <ion-card class="rs-card animated fadeInRight" *ngFor="let multa of multas; let i = index;" [style]="'animation-delay:'+ i*100 + 'ms' | styleSafe">
             <ion-row>
                 <ion-col col-12 class="rs-card-title">
                     {{ multa.description }}
