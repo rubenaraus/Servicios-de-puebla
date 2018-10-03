@@ -18,9 +18,12 @@ import { MultasProvider } from '../providers/multas/multas';
 import { AutoHideDirective } from '../directives/auto-hide/auto-hide';
 import { PayMultaPage } from '../pages/pay-multa/pay-multa';
 
+import { QRScanner } from '@ionic-native/qr-scanner';
+
 // Mapa
 import { AgmCoreModule } from '@agm/core';
 import { StyleSanitizerPipe } from '../pipes/style-sanitizer/style-sanitizer';
+import { QrScanPage } from '../pages/qr-scan/qr-scan';
 
 @NgModule({
   declarations: [
@@ -34,7 +37,8 @@ import { StyleSanitizerPipe } from '../pipes/style-sanitizer/style-sanitizer';
     PerfilPage,
     AutoHideDirective,
     PayMultaPage,
-    StyleSanitizerPipe
+    StyleSanitizerPipe,
+    QrScanPage
   ],
   imports: [
     BrowserModule,
@@ -52,14 +56,16 @@ import { StyleSanitizerPipe } from '../pipes/style-sanitizer/style-sanitizer';
     TenenciaPage,
     VerificacionPage,
     PerfilPage,
-    PayMultaPage
+    PayMultaPage,
+    QrScanPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AutoProvider,
-    MultasProvider
+    MultasProvider,
+    QRScanner
   ]
 })
 export class AppModule {}
