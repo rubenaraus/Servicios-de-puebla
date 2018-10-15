@@ -25,7 +25,7 @@
                 </ion-col>
                 <ion-col col-3>
                     <button *ngIf="!multa.paid" ion-button clear (click)="goPayMulta(multa)">Pagar</button>
-                    <button *ngIf="multa.paid" ion-button clear color="accent">Detalle</button>
+                    <button *ngIf="multa.paid" ion-button clear (click)="goPayMulta(multa)" color="accent">Detalle</button>
                 </ion-col>
             </ion-row>
 

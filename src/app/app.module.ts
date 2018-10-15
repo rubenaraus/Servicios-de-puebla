@@ -18,6 +18,8 @@ import { MultasProvider } from '../providers/multas/multas';
 import { AutoHideDirective } from '../directives/auto-hide/auto-hide';
 import { PayMultaPage } from '../pages/pay-multa/pay-multa';
 
+import { QRScanner } from '@ionic-native/qr-scanner';
+
 // Mapa
 import { AgmCoreModule } from '@agm/core';
 import { StyleSanitizerPipe } from '../pipes/style-sanitizer/style-sanitizer';
@@ -59,7 +61,8 @@ import { StyleSanitizerPipe } from '../pipes/style-sanitizer/style-sanitizer';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AutoProvider,
-    MultasProvider
+    MultasProvider,
+    QRScanner
   ]
 })
 export class AppModule {}

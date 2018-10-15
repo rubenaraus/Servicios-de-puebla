@@ -23,8 +23,12 @@ export class RsToolbarComponent implements OnInit {
     }
 
     changeAutoSelected(id: number){
-        let auto = this.autoProvider.getAutos().filter((auto) => auto.id = id)[0];
+        let auto = this.autoProvider.getAutos().filter((auto) => auto.id === id)[0];
+        console.log(auto);
+        
         this.autoProvider.setAutoSelected(auto);
+
+        this.currentAuto = this.autoProvider.getAutoSelected();
         
     }
 

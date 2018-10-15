@@ -10,7 +10,7 @@
             <ion-label>
                 <h2>{{ multa.description }}</h2>
             </ion-label>
-            <ion-checkbox checked="true"></ion-checkbox>
+            <ion-checkbox checked="true" *ngIf="!multa.paid" ></ion-checkbox>
         </ion-item>
     </div>
     <div>
@@ -40,29 +40,16 @@
                     <ion-col col-5><b>Estatus:</b></ion-col>
                     <ion-col col-7>
                         <ion-badge *ngIf="!multa.paid">Por pagar</ion-badge>
-                        <ion-badge *ngIf="multa.paid">Pagada</ion-badge>
+                        <ion-badge *ngIf="multa.paid" color="secondary">Pagada</ion-badge>
                     </ion-col>
                 </ion-row>
-                <!-- <ion-row>
-                    <ion-col col-5><b>Marca:</b></ion-col>
-                    <ion-col col-7>Nissan</ion-col>
-                </ion-row>
-                <ion-row>
-                    <ion-col col-5><b>Modelo:</b></ion-col>
-                    <ion-col col-7>Versa</ion-col>
-                </ion-row>
-                <ion-row>
-                    <ion-col col-5><b>Placas:</b></ion-col>
-                    <ion-col col-7>YMP-2579</ion-col>
-                </ion-row> -->
             </ion-card-content>
         </ion-card>
     </div>
 
-    <ion-fab right bottom class="animated fadeInDown">
+    <ion-fab *ngIf="!multas[0].paid" right bottom class="animated fadeInDown">
         <button ion-fab color="primary">
             Pagar
-            <!-- <ion-icon name="logo-usd"></ion-icon> -->
         </button>
     </ion-fab>
 </ion-content>

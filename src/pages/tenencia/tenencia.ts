@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { AutoProvider } from '../../providers/auto/auto';
+import { Auto } from '../../models/auto.model';
 
 
 @IonicPage()
@@ -9,11 +11,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class TenenciaPage {
 
-    constructor(public navCtrl: NavController, public navParams: NavParams) {
+    autoSelected: Auto;
+
+    constructor(public navCtrl: NavController, public navParams: NavParams, private autoProvider: AutoProvider) {
+        this.autoSelected = this.autoProvider.getAutoSelected();
+        console.log(this.autoSelected);
+        
     }
 
     ionViewDidLoad() {
-        console.log('ionViewDidLoad TenenciaPage');
+        
     }
 
 }

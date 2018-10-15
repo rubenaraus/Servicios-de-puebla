@@ -8,7 +8,10 @@ import { NewCarPage } from '../newcar/newcar';
 })
 export class HomePage {
 
+    newCar: Object;
+
     constructor(public navCtrl: NavController) {
+        this.newCar = NewCarPage;
     }
 
     ionViewDidLoad() {
