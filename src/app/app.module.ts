@@ -23,6 +23,7 @@ import { QRScanner } from '@ionic-native/qr-scanner';
 // Mapa
 import { AgmCoreModule } from '@agm/core';
 import { StyleSanitizerPipe } from '../pipes/style-sanitizer/style-sanitizer';
+import { QrScanPage } from '../pages/qr-scan/qr-scan';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { StyleSanitizerPipe } from '../pipes/style-sanitizer/style-sanitizer';
     PerfilPage,
     AutoHideDirective,
     PayMultaPage,
-    StyleSanitizerPipe
+    StyleSanitizerPipe,
+    QrScanPage
   ],
   imports: [
     BrowserModule,
@@ -54,7 +56,8 @@ import { StyleSanitizerPipe } from '../pipes/style-sanitizer/style-sanitizer';
     TenenciaPage,
     VerificacionPage,
     PerfilPage,
-    PayMultaPage
+    PayMultaPage,
+    QrScanPage
   ],
   providers: [
     StatusBar,
