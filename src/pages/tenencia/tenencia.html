@@ -2,6 +2,60 @@
     <rs-toolbar title="Tenencia"></rs-toolbar>
 </ion-header>
 
-<ion-content padding>
-    <h1>Contenido de Tenencias</h1>
+<ion-content>
+
+    <ion-content padding>
+
+        <div class="row">
+            <div col-6>
+                <h5>Marca</h5>
+            </div>
+            <div col-6>
+                <h5>{{ autoSelected.brand }}</h5>
+            </div>
+        </div>
+        <div class="row">
+            <div col-6>
+                <h5>Modelo</h5>
+            </div>
+            <div col-6>
+                <h5>{{ autoSelected.model }}</h5>
+            </div>
+        </div>
+        <div class="row">
+            <div col-6>
+                <h5>Placas</h5>
+            </div>
+            <div col-6>
+                <h5>{{ autoSelected.plates }}</h5>
+            </div>
+        </div>
+        <div class="row">
+            <div col-6>
+                <h5>Refrendo atrasado</h5>
+            </div>
+            <div col-6>
+                <h5>$ 0.00</h5>
+            </div>
+        </div>
+        <div class="row">
+            <div col-6>
+                <h5>Total a pagar</h5>
+            </div>
+            <div col-6>
+                <h5>$ 789.25</h5>
+            </div>
+        </div>
+
+        <div>
+            <img src="./../../assets/imgs/qr.png">
+        </div>
+    </ion-content>
+
+    <div class="bottom-content">
+        <button ion-button block large color="primary" class="elevation-1" (click)="goPayMulta()">
+            Pagar &nbsp;
+            <ion-badge color="accent" item-end>{{ 789.25 | currency }}</ion-badge>
+        </button>
+    </div>
 </ion-content>
