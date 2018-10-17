@@ -24,6 +24,7 @@ import { QRScanner } from '@ionic-native/qr-scanner';
 import { AgmCoreModule } from '@agm/core';
 import { StyleSanitizerPipe } from '../pipes/style-sanitizer/style-sanitizer';
 import { QrScanPage } from '../pages/qr-scan/qr-scan';
+import { ReglamentoPage } from '../pages/reglamento/reglamento';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { QrScanPage } from '../pages/qr-scan/qr-scan';
     VerificacionPage,
     PerfilPage,
     AutoHideDirective,
+    ReglamentoPage,
     PayMultaPage,
     StyleSanitizerPipe,
     QrScanPage
@@ -56,6 +58,7 @@ import { QrScanPage } from '../pages/qr-scan/qr-scan';
     TenenciaPage,
     VerificacionPage,
     PerfilPage,
+    ReglamentoPage,
     PayMultaPage,
     QrScanPage
   ],

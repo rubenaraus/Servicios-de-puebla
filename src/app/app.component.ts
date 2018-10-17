@@ -9,6 +9,7 @@ import { MultasPage } from '../pages/multas/multas';
 import { TenenciaPage } from '../pages/tenencia/tenencia';
 import { VerificacionPage } from '../pages/verificacion/verificacion';
 import { PerfilPage } from '../pages/perfil/perfil';
+import { ReglamentoPage } from '../pages/reglamento/reglamento';
 @Component({
   templateUrl: 'app.html',
 })
@@ -48,8 +49,9 @@ export class MyApp {
                 name: 'Servicios',
                 icon: 'navigate'
             },{
-                name: 'Reportes',
-                icon: 'folder'
+                name: 'Reglamento',
+                icon: 'folder-open',
+                page: ReglamentoPage
             },{
                 name: 'Perfil',
                 icon: 'contact',
